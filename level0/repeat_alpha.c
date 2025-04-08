@@ -38,13 +38,14 @@ void	repeat_alpha(char *string)
 		}
 		i++;
 	}
+	ft_putchar('\n');
 }
 
-/*
-int	main(void)
+int	main(int argc, char *argv[])
 {
-	char	*string = "abc 42 This";
-	repeat_alpha(string);
+	if (argc == 1)
+		ft_putchar('\n');
+	else
+		repeat_alpha(argv[1]);
 	return (0);
 }
-*/
