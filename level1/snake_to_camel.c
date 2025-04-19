@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 void	ft_putchar(char c)
 {
@@ -23,13 +22,13 @@ int	main(int argc, char **argv)
 				ft_putchar(argv[1][i]);
 				i++;
 			}
-			if (argv[1][i] == '_' && trigger == 0 && argv[1][i + 1])
+			if (argv[1][i] && argv[1][i] == '_' && trigger == 0 && argv[1][i + 1])
 			{
 				ft_putchar(argv[1][i + 1] - 32);
 				i = i + 2;
 				trigger = 1;
 			}
-			if (argv[1][i] == '_' && argv[1][i] && trigger == 1)
+			if (argv[1][i] == '_' && argv[1][i + 1] && trigger == 1)
 			{
 				i++;
 				ft_putchar(argv[1][i] - 32);
