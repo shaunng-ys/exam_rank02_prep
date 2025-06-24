@@ -48,18 +48,6 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-// void	ft_putstring(char *string)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (string[i])
-// 	{
-// 		ft_putchar(string[i]);
-// 		i++;
-// 	}
-// }
-
 void	print_hex(int nbr)
 {
 	char	*hex_digits;
@@ -67,7 +55,7 @@ void	print_hex(int nbr)
 	int		i;
 	char	string[20];
 
-	hex_digits = "0123456789ABCDEF";
+	hex_digits = "0123456789abcdef";
 	nbr_cpy = nbr;
 	i = 0;
 	while (i < 20)
@@ -83,7 +71,6 @@ void	print_hex(int nbr)
 		i++;
 	}
 	string[i] = hex_digits[nbr_cpy % 16];
-	//printf("%s\n", string);
 	while (i != 0)
 	{
 		ft_putchar(string[i]);
